@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+
+class Name: Equatable, Codable {
+    
+    let name: String
+    init(name: String) {
+        self.name = name
+    }
+}
+
+func ==(lhs: Name, rhs: Name) -> Bool {
+    if lhs.name != rhs.name { return false }
+    return true
+}
